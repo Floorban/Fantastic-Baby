@@ -1,13 +1,13 @@
 using UnityEngine;
 
-[RequireComponent (typeof(Rigidbody2D))]
+[RequireComponent (typeof(Rigidbody))]
 [RequireComponent(typeof(Animator))]
 public class PlayerController : MonoBehaviour
 {
     public Animator animator;
     public Vector2 lastMoveDir;
     public float speed;
-    public Rigidbody2D rb;
+    public Rigidbody rb;
     private Vector2 input;
 
     void Update()
@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        rb.linearVelocity = input * speed * Time.fixedDeltaTime;
+        rb.linearVelocity = new Vector3(input.x * speed * Time.fixedDeltaTime, 0f, input.y * speed * Time.fixedDeltaTime);
     }
     private void HandleInput()
     {

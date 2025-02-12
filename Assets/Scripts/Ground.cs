@@ -8,7 +8,7 @@ public class Ground : MonoBehaviour
     {
         if (canSpin)
         {
-            transform.RotateAround(transform.position, Vector3.forward, spinSpeed * Time.fixedDeltaTime);
+            transform.RotateAround(transform.position, Vector3.up, spinSpeed * Time.fixedDeltaTime);
         }
     }
 }
