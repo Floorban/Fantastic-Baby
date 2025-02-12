@@ -1,23 +1,47 @@
+using DG.Tweening.Core.Easing;
+using Unity.Android.Gradle.Manifest;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent (typeof(Rigidbody))]
 [RequireComponent(typeof(Animator))]
 public class PlayerController : MonoBehaviour
 {
-    public Animator animator;
+    private Animator animator;
+    private Rigidbody rb;
     public Vector2 lastMoveDir;
     public float speed;
-    public Rigidbody rb;
     private Vector2 input;
 
+    [Header("Jump")]
+    public float jumpForce;
+    public Transform transObj;
+    public Transform transBody;
+    public Transform transShadow;
+
+    public float verticalSpeed;
+    public float gravity;
+    public bool isGrounded, canShit;
+
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody>();
+        transObj = transform;
+    }
     void Update()
     {
        HandleInput();
        HandleAnim();
+       CheckGroundHit();
     }
     private void FixedUpdate()
     {
         rb.linearVelocity = new Vector3(input.x * speed * Time.fixedDeltaTime, 0f, input.y * speed * Time.fixedDeltaTime);
+        if (!isGrounded)
+        {
+            UpdateVerticlePosition();
+        }
     }
     private void HandleInput()
     {
@@ -30,6 +54,11 @@ public class PlayerController : MonoBehaviour
         input.x = Input.GetAxisRaw("Horizontal");
         input.y = Input.GetAxisRaw("Vertical");
         input.Normalize();
+
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        {
+            Jump();
+        }
     }
     private void HandleAnim()
     {
@@ -38,5 +67,36 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("MoveMagnitude", input.magnitude);
         animator.SetFloat("LastMoveX", lastMoveDir.x);
         animator.SetFloat("LastMoveY", lastMoveDir.y);
+    }
+    public void Jump()
+    {
+        if (isGrounded)
+        {
+            verticalSpeed = jumpForce; 
+            isGrounded = false;
+        }
+    }
+    void UpdateVerticlePosition()
+    {
+        verticalSpeed += gravity * Time.fixedDeltaTime;
+
+        Vector3 deltaPosition = Vector3.up * verticalSpeed * Time.fixedDeltaTime;
+        transBody.position += deltaPosition;
+        transShadow.position = transObj.position - Vector3.up / 2f;
+    }
+    void CheckGroundHit()
+    {
+        if (transBody.position.y < transObj.position.y && !isGrounded)
+        {
+            transBody.position = transObj.position;
+            transShadow.position = transObj.position;
+            verticalSpeed = 0f; 
+            isGrounded = true;
+            canShit = true;
+        }
+        if (canShit)
+        {
+            //Instantiate(splash, transform.position, transform.rotation);
+        }
     }
 }

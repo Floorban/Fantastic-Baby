@@ -32,12 +32,12 @@ public class SpawnedObj : MonoBehaviour
     private IEnumerator Curve(Vector3 start, Vector3 finish)
     {
         var timePast = 0f;
-
-        while (timePast < duration)
+        var dur = Random.Range(duration - 0.2f, duration + 0.2f);
+        while (timePast < dur)
         {
             timePast += Time.deltaTime;
 
-            var linearTime = timePast / duration;
+            var linearTime = timePast / dur;
             var heightTime = curve.Evaluate(linearTime);
 
             var height = Mathf.Lerp(0f, maxHeightY, heightTime); //clamped between the max height and 0
