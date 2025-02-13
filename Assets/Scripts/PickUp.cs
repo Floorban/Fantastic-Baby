@@ -1,16 +1,27 @@
+using System;
 using UnityEngine;
-
-public class PickUp : MonoBehaviour
+public interface ICollectable
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public void Collect();
+}
+public class PickUp : MonoBehaviour, ICollectable
+{
+    public static event Action OnPickup;
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
     }
+    public void Collect()
+    {
+        Debug.Log("on pickup");
+        Destroy(gameObject);
+        OnPickup?.Invoke();
+    }
+
 }

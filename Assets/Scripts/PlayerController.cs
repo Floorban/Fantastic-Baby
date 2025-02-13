@@ -101,7 +101,7 @@ public class PlayerController : MonoBehaviour
             isGrounded = true;
             canShit = true;
         }
-        if (canShit)
+        if (canShit && isGrounded)
         {
             GameObject shit = Instantiate(shitPrefab, transform.position, transform.rotation);
             shit.transform.SetParent(FindFirstObjectByType<Ground>().transform);
