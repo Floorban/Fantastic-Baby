@@ -1152,7 +1152,7 @@ MonoBehaviour:
   spawnRadius: 4.5
   innerRadius: 2.5
   curProgress: 0
-  pDropSpeed: 0
+  pDropSpeed: 10
   progressBar: {fileID: 743722836}
 --- !u!65 &1437571024
 BoxCollider:
