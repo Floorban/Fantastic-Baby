@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class SpawnedObj : MonoBehaviour
+public class SpawnedObj : PickUp
 {
     Camera cam;
     [Header("Properties")]
@@ -27,6 +27,10 @@ public class SpawnedObj : MonoBehaviour
     {
         if (targetPos == null || image == null) return;
         sr.sprite = image;
+        StartCoroutine(Curve(transform.position, targetPos));
+    }
+    public void Throw(Vector3 targetPos)
+    {
         StartCoroutine(Curve(transform.position, targetPos));
     }
     private IEnumerator Curve(Vector3 start, Vector3 finish)

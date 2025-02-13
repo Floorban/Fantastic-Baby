@@ -2,26 +2,21 @@ using System;
 using UnityEngine;
 public interface ICollectable
 {
-    public void Collect();
+    public void Collect(Transform holder);
 }
 public class PickUp : MonoBehaviour, ICollectable
 {
     public static event Action OnPickup;
 
-    void Start()
+    public void Collect(Transform holder)
     {
-        
-    }
-
-    void Update()
-    {
-        
-    }
-    public void Collect()
-    {
-        Debug.Log("on pickup");
-        Destroy(gameObject);
-        OnPickup?.Invoke();
+        if (holder != null)
+        {
+            Debug.Log("on pickup");
+            transform.position = holder.position;
+            transform.SetParent(holder);
+            OnPickup?.Invoke();
+        }
     }
 
 }

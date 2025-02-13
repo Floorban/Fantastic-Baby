@@ -2,12 +2,27 @@ using UnityEngine;
 
 public class Collector : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    [SerializeField] Transform throwTarget;
+    [SerializeField] Transform pickUpHolder;
+    public SpawnedObj curObj;
+    private void Update()
     {
-        ICollectable collectable = collision.GetComponent<ICollectable>();
-        if (collectable != null)
+        if (Input.GetKeyDown(KeyCode.F) && curObj != null)
         {
-            collectable.Collect();
+            curObj.duration = 0.7f;
+            curObj.maxHeightY = 7f;
+            curObj.Throw(throwTarget.position);
+            curObj.transform.SetParent(throwTarget);
+            curObj = null;
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        ICollectable collectable = other.GetComponent<ICollectable>();
+        if (collectable != null && curObj == null)
+        {
+            collectable.Collect(pickUpHolder);
+            curObj = other.GetComponent<SpawnedObj>();
         }
     }
 }
