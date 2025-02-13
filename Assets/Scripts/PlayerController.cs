@@ -4,12 +4,11 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent (typeof(Rigidbody))]
-[RequireComponent(typeof(Animator))]
 public class PlayerController : MonoBehaviour
 {
     private Animator animator;
     private Rigidbody rb;
-    public Vector2 lastMoveDir;
+    //public Vector2 lastMoveDir;
     public float speed;
     private Vector2 input;
 
@@ -45,12 +44,12 @@ public class PlayerController : MonoBehaviour
     }
     private void HandleInput()
     {
-        float moveX = Input.GetAxisRaw("Horizontal");
+      /*  float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
         if ((moveX == 0 && moveY == 0) && (input.x != 0 || input.y != 0))
         {
             lastMoveDir = input;
-        }
+        }*/
         input.x = Input.GetAxisRaw("Horizontal");
         input.y = Input.GetAxisRaw("Vertical");
         input.Normalize();
@@ -62,11 +61,18 @@ public class PlayerController : MonoBehaviour
     }
     private void HandleAnim()
     {
-        animator.SetFloat("MoveX", input.x);
+        /*animator.SetFloat("MoveX", input.x);
         animator.SetFloat("MoveY", input.y);
-        animator.SetFloat("MoveMagnitude", input.magnitude);
         animator.SetFloat("LastMoveX", lastMoveDir.x);
-        animator.SetFloat("LastMoveY", lastMoveDir.y);
+        animator.SetFloat("LastMoveY", lastMoveDir.y);*/
+        if (isGrounded)
+        {
+            animator.SetFloat("MoveMagnitude", input.magnitude);
+        }
+        else
+        {
+            animator.SetFloat("MoveMagnitude", 0f);
+        }
     }
     public void Jump()
     {
