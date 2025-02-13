@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour
         if (!canAct)
         {
             input = Vector2.zero;
+            rb.linearVelocity = Vector3.zero;
             animator.SetFloat("MoveMagnitude", 0f);
             return;
         }
