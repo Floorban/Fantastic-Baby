@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Ground : MonoBehaviour
 {
-    [SerializeField] bool canSpin;
+    public bool canSpin;
     [SerializeField] float spinSpeed;
     private void FixedUpdate()
     {
