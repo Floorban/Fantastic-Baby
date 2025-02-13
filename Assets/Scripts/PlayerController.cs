@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     public float verticalSpeed;
     public float gravity;
     public bool isGrounded, canShit;
-
+    public GameObject shitPrefab;
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -96,7 +96,9 @@ public class PlayerController : MonoBehaviour
         }
         if (canShit)
         {
-            //Instantiate(splash, transform.position, transform.rotation);
+            GameObject shit = Instantiate(shitPrefab, transform.position, transform.rotation);
+            shit.transform.SetParent(FindFirstObjectByType<Ground>().transform);
+            canShit = false;
         }
     }
 }
