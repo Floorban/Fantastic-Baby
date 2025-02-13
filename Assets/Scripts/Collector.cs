@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Collector : MonoBehaviour
 {
-    [SerializeField] Transform throwTarget;
+    [SerializeField] LevelManager throwTarget;
     [SerializeField] Transform pickUpHolder;
     public SpawnedObj curObj;
     private void Update()
@@ -11,8 +11,9 @@ public class Collector : MonoBehaviour
         {
             curObj.duration = 0.4f;
             curObj.maxHeightY = 2f;
-            curObj.Throw(throwTarget.position);
-            curObj.transform.SetParent(throwTarget);
+            curObj.Throw(throwTarget.transform.position);
+            curObj.transform.SetParent(throwTarget.transform);
+            throwTarget.curProgress += curObj.value;
             curObj = null;
         }
     }

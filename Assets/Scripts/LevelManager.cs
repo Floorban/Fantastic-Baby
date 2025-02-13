@@ -1,5 +1,7 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
@@ -10,9 +12,29 @@ public class LevelManager : MonoBehaviour
     public float minSpawnTime;
     public float maxSpawnTime;
     public float spawnRadius, innerRadius;
+
+    [Header("Progress")]
+    public float curProgress;
+    [SerializeField] float pDropSpeed;
+    [SerializeField] Image progressBar;
     void Start()
     {
         StartCoroutine(SpawnObjs());
+    }
+    private void FixedUpdate()
+    {
+        if (!isPlaying) return;
+        progressBar.fillAmount = curProgress / 100f;
+
+        if (curProgress > 0)
+        {
+            curProgress -= Time.fixedDeltaTime * pDropSpeed;
+        }
+        if (curProgress >= 100f)
+        {
+            curProgress = 100f;
+            // explooooode
+        }
     }
     IEnumerator SpawnObjs()
     {
@@ -61,6 +83,16 @@ public class LevelManager : MonoBehaviour
 
         return spawnPos;
     }
+/*    private void OnTriggerEnter(Collider other)
+    {
+        ICollectable collectable = other.GetComponent<ICollectable>();
+        if (collectable != null)
+        {
+            collectable.Collect(transform);
+            float v = other.GetComponent<SpawnedObj>().value;
+            curProgress += v;
+        }
+    }*/
 
     void OnDrawGizmos()
     {

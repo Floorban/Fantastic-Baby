@@ -6,6 +6,7 @@ public interface ICollectable
 }
 public class PickUp : MonoBehaviour, ICollectable
 {
+    public float value;
     public static event Action OnPickup;
 
     public void Collect(Transform holder)

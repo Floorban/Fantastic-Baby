@@ -31,6 +31,7 @@ public class SpawnedObj : PickUp
     }
     public void Throw(Vector3 targetPos)
     {
+        value = Random.Range(value - 10f,value + 10f);
         StartCoroutine(Curve(transform.position, targetPos));
     }
     private IEnumerator Curve(Vector3 start, Vector3 finish)
