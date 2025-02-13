@@ -72,6 +72,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             animator.SetFloat("MoveMagnitude", 0f);
+            // jump animation trigger here
         }
     }
     public void Jump()
@@ -95,7 +96,7 @@ public class PlayerController : MonoBehaviour
         if (transBody.position.y < transObj.position.y && !isGrounded)
         {
             transBody.position = transObj.position;
-            transShadow.position = transObj.position;
+            transShadow.position = transObj.position - Vector3.up / 2f;
             verticalSpeed = 0f; 
             isGrounded = true;
             canShit = true;

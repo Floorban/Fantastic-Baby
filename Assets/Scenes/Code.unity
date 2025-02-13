@@ -127,6 +127,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1220852199481053691, guid: 3987284ed83e82140bba03349fb218ad, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 2344264231129395918, guid: b8a1ccbe3b8e28448921119844c9882b, type: 3}
+    - target: {fileID: 3344753862006821671, guid: 3987284ed83e82140bba03349fb218ad, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4186432424267561882, guid: 3987284ed83e82140bba03349fb218ad, type: 3}
       propertyPath: m_Name
       value: Kid
@@ -137,7 +145,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7105355097249861094, guid: 3987284ed83e82140bba03349fb218ad, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.53
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7105355097249861094, guid: 3987284ed83e82140bba03349fb218ad, type: 3}
       propertyPath: m_LocalPosition.z
