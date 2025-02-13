@@ -7,7 +7,7 @@ public class Collector : MonoBehaviour
     public SpawnedObj curObj;
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && curObj != null)
+        if (Input.GetKeyDown(KeyCode.F) && curObj != null && throwTarget != null)
         {
             curObj.duration = 0.4f;
             curObj.maxHeightY = 2f;

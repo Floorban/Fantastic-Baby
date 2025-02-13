@@ -52,6 +52,7 @@ public class PlayerController : MonoBehaviour
             UpdateVerticlePosition();
         }
     }
+
     private void HandleInput()
     {
       /*  float moveX = Input.GetAxisRaw("Horizontal");
