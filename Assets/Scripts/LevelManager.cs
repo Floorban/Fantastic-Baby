@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
+    CameraMove cm;
+    PlayerController player;
+    Ground ground;
     public bool isPlaying = true;
     [SerializeField] Transform spawnArea;
     [SerializeField] Sprite[] objSprites;
@@ -17,6 +20,12 @@ public class LevelManager : MonoBehaviour
     public float curProgress;
     [SerializeField] float pDropSpeed;
     [SerializeField] Image progressBar;
+    private void Awake()
+    {
+        cm = FindFirstObjectByType<CameraMove>();
+        player = FindFirstObjectByType<PlayerController>();
+        ground = FindFirstObjectByType<Ground>();
+    }
     void Start()
     {
         StartCoroutine(SpawnObjs());
@@ -33,7 +42,7 @@ public class LevelManager : MonoBehaviour
         if (curProgress >= 100f)
         {
             curProgress = 100f;
-            // explooooode
+            Explode();
         }
     }
     IEnumerator SpawnObjs()
@@ -58,7 +67,24 @@ public class LevelManager : MonoBehaviour
             obj.Init(randomSprite, GetRandomPosition());
         }
     }
-
+    void Explode()
+    {
+        StartCoroutine(ExplodeClimaxTime());
+    }
+    IEnumerator ExplodeClimaxTime()
+    {
+        player.canAct = false;
+        ground.canSpin = false;
+        minSpawnTime = 0.03f;
+        maxSpawnTime = 0.03f;
+        yield return StartCoroutine(cm.Zoom(8f, 35f, 45f, 0.5f));
+        yield return new WaitForSeconds(0.5f);
+        player.canAct = true;
+        ground.canSpin = true;
+        minSpawnTime = 0.5f;
+        maxSpawnTime = 2f;
+        yield return StartCoroutine(cm.Zoom(10f, 45f, 35f, 0.3f));
+    }
     Vector3 GetRandomPosition()
     {
         Vector3 spawnPos = Vector3.zero;

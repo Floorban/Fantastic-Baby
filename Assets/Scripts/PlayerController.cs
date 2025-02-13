@@ -6,6 +6,7 @@ using UnityEngine;
 [RequireComponent (typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
 {
+    public bool canAct;
     private Animator animator;
     private Rigidbody rb;
     //public Vector2 lastMoveDir;
@@ -30,12 +31,20 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
+        if (!canAct)
+        {
+            input = Vector2.zero;
+            animator.SetFloat("MoveMagnitude", 0f);
+            return;
+        }
        HandleInput();
        HandleAnim();
        CheckGroundHit();
     }
     private void FixedUpdate()
     {
+        if (!canAct) return;
+
         rb.linearVelocity = new Vector3(input.x * speed * Time.fixedDeltaTime, 0f, input.y * speed * Time.fixedDeltaTime);
         if (!isGrounded)
         {
