@@ -240,7 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 187e615e221b4ba4d806c498d9ca5df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  throwTarget: {fileID: 1437571022}
+  throwTarget: {fileID: 0}
   pickUpHolder: {fileID: 1349361239}
   curObj: {fileID: 0}
 --- !u!1001 &489976525

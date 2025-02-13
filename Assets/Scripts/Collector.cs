@@ -9,8 +9,8 @@ public class Collector : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F) && curObj != null)
         {
-            curObj.duration = 0.7f;
-            curObj.maxHeightY = 7f;
+            curObj.duration = 0.4f;
+            curObj.maxHeightY = 2f;
             curObj.Throw(throwTarget.position);
             curObj.transform.SetParent(throwTarget);
             curObj = null;
