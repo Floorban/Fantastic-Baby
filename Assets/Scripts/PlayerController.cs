@@ -1,5 +1,5 @@
 using DG.Tweening.Core.Easing;
-using Unity.Android.Gradle.Manifest;
+//using Unity.Android.Gradle.Manifest;
 using Unity.VisualScripting;
 using UnityEngine;
 
