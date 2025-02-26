@@ -3,6 +3,7 @@ using UnityEngine;
 public interface ICollectable
 {
     public void Collect(Transform holder);
+    public void Use();
 }
 public class PickUp : MonoBehaviour, ICollectable
 {
@@ -18,6 +19,11 @@ public class PickUp : MonoBehaviour, ICollectable
             transform.SetParent(holder);
             OnPickup?.Invoke();
         }
+    }
+
+    public virtual void Use()
+    {
+
     }
 
 }

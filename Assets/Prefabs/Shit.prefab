@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8728426911165560951}
   - component: {fileID: 1351808906518606287}
   - component: {fileID: 4054501638406030525}
-  - component: {fileID: 3211880337748555314}
   m_Layer: 0
   m_Name: Shit
   m_TagString: Untagged
@@ -138,42 +137,3 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3211880337748555314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6488923775162186117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bbddaff2aebc5947aa09f2237dbbfff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  value: 5
-  curve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 2
-      outSlope: 2
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1.0650411
-      value: 0.0003165938
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  duration: 0.5
-  maxHeightY: 3

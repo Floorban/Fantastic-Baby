@@ -18,16 +18,13 @@ public class Collector : MonoBehaviour
             curObj = null;
         }
     }
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         ICollectable collectable = other.GetComponent<ICollectable>();
         if (collectable != null && curObj == null)
         {
-            if (Input.GetKeyDown(KeyCode.G))
-            {
-                collectable.Collect(pickUpHolder);
-                curObj = other.GetComponent<SpawnedObj>();
-            }
+            collectable.Collect(pickUpHolder);
+            curObj = other.GetComponent<SpawnedObj>();
         }
     }
 }
