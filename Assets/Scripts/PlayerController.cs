@@ -110,7 +110,7 @@ public class PlayerController : MonoBehaviour
             transShadow.position = transObj.position - Vector3.up / 2f;
             verticalSpeed = 0f; 
             isGrounded = true;
-            //canShit = true;
+            canShit = true;
         }
         if (canShit && isGrounded)
         {
