@@ -17,7 +17,7 @@ public class PickUp : MonoBehaviour, ICollectable
             Debug.Log("on pickup");
             transform.position = holder.position;
             transform.SetParent(holder);
-            OnPickup?.Invoke();
+            //OnPickup?.Invoke();
         }
     }
 
