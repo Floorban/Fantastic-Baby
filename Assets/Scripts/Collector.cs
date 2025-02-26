@@ -14,16 +14,20 @@ public class Collector : MonoBehaviour
             curObj.Throw(throwTarget.transform.position);
             curObj.transform.SetParent(throwTarget.transform);
             throwTarget.curProgress += curObj.value;
+            throwTarget.spawnedObjs.Remove(curObj);
             curObj = null;
         }
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         ICollectable collectable = other.GetComponent<ICollectable>();
         if (collectable != null && curObj == null)
         {
-            collectable.Collect(pickUpHolder);
-            curObj = other.GetComponent<SpawnedObj>();
+            if (Input.GetKeyDown(KeyCode.G))
+            {
+                collectable.Collect(pickUpHolder);
+                curObj = other.GetComponent<SpawnedObj>();
+            }
         }
     }
 }
