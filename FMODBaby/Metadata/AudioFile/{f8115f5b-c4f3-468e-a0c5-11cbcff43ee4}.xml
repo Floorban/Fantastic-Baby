@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{f8115f5b-c4f3-468e-a0c5-11cbcff43ee4}">
+		<property name="assetPath">
+			<value>Music/Hi-hats.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.8509523809523809</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f60018cc-3c42-4b9f-bf20-37ec8c598f6c}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -9,6 +9,7 @@ public class LevelManager : MonoBehaviour
     CameraMove cm;
     PlayerController player;
     Ground ground;
+    AudioManager audioManager;
     public bool isPlaying = true;
     [SerializeField] Transform spawnArea;
     [SerializeField] Sprite[] objSprites;
@@ -24,20 +25,33 @@ public class LevelManager : MonoBehaviour
     public float curProgress;
     [SerializeField] float pDropSpeed;
     [SerializeField] Image progressBar;
+
+    [Header("Audio")]
+    [SerializeField] FMODUnity.EventReference s_Music;
+    [SerializeField] FMOD.Studio.EventInstance i_Music;
+    public string volcanoIntensity = "VolcanoIntensity";
     private void Awake()
     {
         cm = FindFirstObjectByType<CameraMove>();
         player = FindFirstObjectByType<PlayerController>();
         ground = FindFirstObjectByType<Ground>();
+        audioManager = FindFirstObjectByType<AudioManager>();
+
     }
     void Start()
     {
         StartCoroutine(SpawnObjs());
+        i_Music = FMODUnity.RuntimeManager.CreateInstance(s_Music);
+        i_Music.start();
+
+        StartCoroutine(LowerIntensity());
+
     }
     private void FixedUpdate()
     {
         if (!isPlaying) return;
         progressBar.fillAmount = curProgress / 100f;
+        i_Music.setParameterByName(volcanoIntensity, curProgress);
 
         if (curProgress > 0)
         {
@@ -49,6 +63,7 @@ public class LevelManager : MonoBehaviour
             StartCoroutine(ExplodeClimaxTime());
         }
     }
+
     IEnumerator SpawnObjs()
     {
         while (isPlaying)
@@ -135,6 +150,14 @@ public class LevelManager : MonoBehaviour
 
         return spawnPos;
     }
+
+    IEnumerator LowerIntensity() { // comment this out if u dont want the thing to go up
+        while (curProgress < 100f || curProgress > 0) {
+            curProgress -= 0.2f;
+            yield return new WaitForSeconds(0.1f);
+        }
+    }
+
 /*    private void OnTriggerEnter(Collider other)
     {
         ICollectable collectable = other.GetComponent<ICollectable>();
@@ -155,5 +178,9 @@ public class LevelManager : MonoBehaviour
 
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(spawnPos, innerRadius); 
+    }
+
+    private void OnDestroy() {
+        i_Music.release();
     }
 }

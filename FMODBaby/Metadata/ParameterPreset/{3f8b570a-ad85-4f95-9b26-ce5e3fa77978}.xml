@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{3f8b570a-ad85-4f95-9b26-ce5e3fa77978}">
+		<property name="name">
+			<value>VolcanoIntensity</value>
+		</property>
+		<relationship name="folder">
+			<destination>{388a56a1-abb6-4488-922f-7243dc74f7d5}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{66224d09-0184-4166-b7d9-dd7db20f436e}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{66224d09-0184-4166-b7d9-dd7db20f436e}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
