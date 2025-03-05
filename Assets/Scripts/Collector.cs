@@ -16,7 +16,7 @@ public class Collector : MonoBehaviour
     {
         if (player.transform.localScale.x > 0.3f)
         {
-            player.transform.localScale -= Vector3.one * 0.02f * Time.deltaTime;
+            player.transform.localScale -= Vector3.one * 0.01f * Time.deltaTime;
         }
         if (Input.GetKeyDown(KeyCode.F))
         {
