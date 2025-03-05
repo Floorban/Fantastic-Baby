@@ -46,6 +46,7 @@ public class Collector : MonoBehaviour
                 throwTarget.curProgress += curObj.value;
                 throwTarget.spawnedObjs.Remove(curObj);
                 curObj = null;
+                canPickupObj = null;
                 canPickup = true;
             }
         }
