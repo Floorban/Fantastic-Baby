@@ -2337,7 +2337,7 @@ MonoBehaviour:
   offset: {x: 0, y: 5, z: -15}
   smoothTime: 0.3
   target: {fileID: 489976526}
-  center: {x: 2, y: -7, z: -17}
+  center: {x: 4, y: 8, z: -18}
 --- !u!1001 &532211439
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7012,7 +7012,7 @@ Transform:
   m_GameObject: {fileID: 1437571020}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.4, y: 1.7805, z: -13.32}
+  m_LocalPosition: {x: -10, y: 1.7805, z: -4.4}
   m_LocalScale: {x: 2.24319, y: 2.24319, z: 2.24319}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -7046,11 +7046,11 @@ MonoBehaviour:
   maxSpawnCount: 10
   minSpawnTime: 0.5
   maxSpawnTime: 2
-  spawnRadius: 15
+  spawnRadius: 13
   innerRadius: 5
   isExploding: 0
   curProgress: 0
-  pDropSpeed: 10
+  pDropSpeed: 2
   progressBar: {fileID: 728084710}
   s_Music:
     Guid:
@@ -7737,7 +7737,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canSpin: 1
-  spinSpeed: 5
+  spinSpeed: 10
 --- !u!1 &1723081737 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8409852532699121100, guid: c1b2f8bb54d182947ae4be8fde6fa066, type: 3}
