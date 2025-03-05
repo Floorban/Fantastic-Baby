@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4764467674254946951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MinecraftEat
+  m_EditorClassIdentifier: 
+  Path: event:/MinecraftEat
+  Guid:
+    Data1: 1121792330
+    Data2: 1173325590
+    Data3: 113496488
+    Data4: 70858312
+  Banks:
+  - {fileID: -1076511235660481121}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1420
 --- !u!114 &-1076511235660481121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,10 +42,10 @@ MonoBehaviour:
   Path: FMODBaby/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638767627583947737
+  lastModified: 638767738688425239
   FileSizes:
   - Name: Desktop
-    Value: 686496
+    Value: 704064
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -37,12 +64,13 @@ MonoBehaviour:
   - {fileID: -1076511235660481121}
   EditorEvents:
   - {fileID: 6154325430464356918}
+  - {fileID: -4764467674254946951}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1076511235660481121}
   StringsBanks:
   - {fileID: 6345749663891573424}
-  cacheTime: 638767627583947737
+  cacheTime: 638767738688474290
   cacheVersion: 131623
 --- !u!114 &4752943261979592232
 MonoBehaviour:
@@ -111,8 +139,8 @@ MonoBehaviour:
   Path: FMODBaby/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638767627583947737
+  lastModified: 638767738688474290
   FileSizes:
   - Name: Desktop
-    Value: 820
+    Value: 874
   Exists: 1

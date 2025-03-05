@@ -73,7 +73,7 @@ public class Collector : MonoBehaviour
                 }
                 else
                 {
-                    if (player.transform.localScale.x >= 1)
+                    if (player.transform.localScale.x >= 1.5f)
                     {
                         RuntimeManager.PlayOneShot(s_Eating, transform.position);
                         animator.SetTrigger("Eating");
@@ -88,7 +88,7 @@ public class Collector : MonoBehaviour
     IEnumerator Enlarge()
     {
         yield return new WaitForSeconds(0.8f);
-        player.transform.localScale *= 1.2f;
+        player.transform.localScale *= 1.5f;
     }
     private void OnTriggerEnter(Collider other)
     {

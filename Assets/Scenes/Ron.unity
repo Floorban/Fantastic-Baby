@@ -2166,23 +2166,23 @@ PrefabInstance:
       objectReference: {fileID: 1437571023}
     - target: {fileID: 4433962322413785505, guid: 3987284ed83e82140bba03349fb218ad, type: 3}
       propertyPath: s_Eating.Path
-      value: event:/VolcanoMusic
+      value: event:/MinecraftEat
       objectReference: {fileID: 0}
     - target: {fileID: 4433962322413785505, guid: 3987284ed83e82140bba03349fb218ad, type: 3}
       propertyPath: s_Eating.Guid.Data1
-      value: 1241199337
+      value: 1121792330
       objectReference: {fileID: 0}
     - target: {fileID: 4433962322413785505, guid: 3987284ed83e82140bba03349fb218ad, type: 3}
       propertyPath: s_Eating.Guid.Data2
-      value: 1277060060
+      value: 1173325590
       objectReference: {fileID: 0}
     - target: {fileID: 4433962322413785505, guid: 3987284ed83e82140bba03349fb218ad, type: 3}
       propertyPath: s_Eating.Guid.Data3
-      value: 291034518
+      value: 113496488
       objectReference: {fileID: 0}
     - target: {fileID: 4433962322413785505, guid: 3987284ed83e82140bba03349fb218ad, type: 3}
       propertyPath: s_Eating.Guid.Data4
-      value: 84739854
+      value: 70858312
       objectReference: {fileID: 0}
     - target: {fileID: 7008230841805199609, guid: 3987284ed83e82140bba03349fb218ad, type: 3}
       propertyPath: finalScreen
