@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using FMODUnity;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -31,7 +32,10 @@ public class LevelManager : MonoBehaviour
     [Header("Audio")]
     [SerializeField] FMODUnity.EventReference s_Music;
     [SerializeField] FMOD.Studio.EventInstance i_Music;
+
+    [SerializeField] FMODUnity.EventReference s_Baby;
     public string volcanoIntensity = "VolcanoIntensity";
+
     private void Awake()
     {
         cm = FindFirstObjectByType<CameraMove>();
@@ -63,6 +67,7 @@ public class LevelManager : MonoBehaviour
         {
             curProgress = 99f;
             StartCoroutine(ExplodeClimaxTime());
+            RuntimeManager.PlayOneShot(s_Baby, transform.position);
             GameObject l = Instantiate(lava, spawnArea.position, Quaternion.Euler(0, Random.Range(0f, 360f), 0));
             l.transform.SetParent(gameObject.transform);
             pDropSpeed += 2;
