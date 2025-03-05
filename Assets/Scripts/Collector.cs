@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.WSA;
 
@@ -6,6 +7,7 @@ public class Collector : MonoBehaviour
     /*    [SerializeField] float interactRadius;
         [SerializeField] LayerMask interactLayer;*/
     [SerializeField] GameObject player;
+    [SerializeField] Animator animator;
     [SerializeField] LevelManager throwTarget;
     [SerializeField] Transform pickUpHolder;
     public GameObject canPickupObj;
@@ -57,17 +59,19 @@ public class Collector : MonoBehaviour
             {
                 if (curObj.eatable)
                 {
-                    curObj.EatMe();
-                    player.transform.localScale *= 1.2f;
+                    //play eating sound
+                    animator.SetTrigger("Eating");
                     Destroy(curObj.gameObject, 0.8f);
                     curObj = null;
                     canPickupObj = null;
+                    StartCoroutine(Enlarge());
                 }
                 else
                 {
                     if (player.transform.localScale.x >= 1)
                     {
-                        curObj.EatMe();
+                        //play eating sound
+                        animator.SetTrigger("Eating");
                         Destroy(curObj.gameObject, 0.8f);
                         curObj = null;
                         canPickupObj = null;
@@ -75,6 +79,11 @@ public class Collector : MonoBehaviour
                 }
             }
         }
+    }
+    IEnumerator Enlarge()
+    {
+        yield return new WaitForSeconds(0.8f);
+        player.transform.localScale *= 1.2f;
     }
     private void OnTriggerEnter(Collider other)
     {

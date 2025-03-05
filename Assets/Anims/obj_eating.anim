@@ -23,7 +23,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0
+        value: 0.34
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -32,7 +32,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.11666667
-        value: 0
+        value: 0.34
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -41,7 +41,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.23333333
-        value: 0
+        value: 0.34
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -52,7 +52,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: PlayerCanvas
+    path: PlayerCanvas/ShadowSprite/Hand
     classID: 224
     script: {fileID: 0}
     flags: 0
@@ -62,7 +62,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.301
+        value: 0.87
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -71,7 +71,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.11666667
-        value: -0.018
+        value: 1.49
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -80,7 +80,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.23333333
-        value: 0.301
+        value: 0.64
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -91,7 +91,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: PlayerCanvas
+    path: PlayerCanvas/ShadowSprite/Hand
     classID: 224
     script: {fileID: 0}
     flags: 0
@@ -101,7 +101,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -0.174
+        value: -0.69
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -110,7 +110,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.11666667
-        value: 0.01
+        value: -1.32
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -119,7 +119,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.23333333
-        value: -0.174
+        value: -0.47
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -130,7 +130,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: PlayerCanvas
+    path: PlayerCanvas/ShadowSprite/Hand
     classID: 224
     script: {fileID: 0}
     flags: 0
@@ -140,7 +140,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.302
+        value: 0.86
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -149,7 +149,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.11666667
-        value: -0.018
+        value: 1.49
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -158,7 +158,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.23333333
-        value: 0.302
+        value: 0.64
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -169,7 +169,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_AnchoredPosition.y
-    path: PlayerCanvas
+    path: PlayerCanvas/ShadowSprite/Hand
     classID: 224
     script: {fileID: 0}
     flags: 0
@@ -182,7 +182,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 2403869964
+      path: 2867981505
       attribute: 3762036201
       script: {fileID: 0}
       typeID: 224
@@ -191,7 +191,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 2403869964
+      path: 2867981505
       attribute: 2033536083
       script: {fileID: 0}
       typeID: 224
@@ -200,7 +200,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 2403869964
+      path: 2867981505
       attribute: 538195251
       script: {fileID: 0}
       typeID: 224
@@ -209,7 +209,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 2403869964
+      path: 2867981505
       attribute: 2537237887
       script: {fileID: 0}
       typeID: 224
@@ -245,7 +245,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0
+        value: 0.34
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -254,7 +254,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.11666667
-        value: 0
+        value: 0.34
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -263,7 +263,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.23333333
-        value: 0
+        value: 0.34
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -274,7 +274,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: PlayerCanvas
+    path: PlayerCanvas/ShadowSprite/Hand
     classID: 224
     script: {fileID: 0}
     flags: 0
@@ -284,7 +284,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.301
+        value: 0.87
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -293,7 +293,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.11666667
-        value: -0.018
+        value: 1.49
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -302,7 +302,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.23333333
-        value: 0.301
+        value: 0.64
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -313,7 +313,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: PlayerCanvas
+    path: PlayerCanvas/ShadowSprite/Hand
     classID: 224
     script: {fileID: 0}
     flags: 0
@@ -323,7 +323,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -0.174
+        value: -0.69
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -332,7 +332,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.11666667
-        value: 0.01
+        value: -1.32
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -341,7 +341,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.23333333
-        value: -0.174
+        value: -0.47
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -352,7 +352,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: PlayerCanvas
+    path: PlayerCanvas/ShadowSprite/Hand
     classID: 224
     script: {fileID: 0}
     flags: 0
@@ -362,7 +362,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.302
+        value: 0.86
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -371,7 +371,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.11666667
-        value: -0.018
+        value: 1.49
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -380,7 +380,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.23333333
-        value: 0.302
+        value: 0.64
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -391,7 +391,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_AnchoredPosition.y
-    path: PlayerCanvas
+    path: PlayerCanvas/ShadowSprite/Hand
     classID: 224
     script: {fileID: 0}
     flags: 0

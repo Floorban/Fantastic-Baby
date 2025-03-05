@@ -7,7 +7,6 @@ public class SpawnedObj : PickUp
     Camera cam;
     [Header("Properties")]
     [SerializeField] Image sr;
-    public Animator animator;
     public bool eatable;
 
     [Header("Throw Anim")]
@@ -17,7 +16,6 @@ public class SpawnedObj : PickUp
     private void Awake()
     {
         cam = FindFirstObjectByType<Camera>();
-        animator = GetComponent<Animator>();
     }
     private void LateUpdate()
     {
@@ -54,11 +52,5 @@ public class SpawnedObj : PickUp
 
             yield return null;
         }
-    }
-
-    public void EatMe()
-    {
-        //play eating mincraft sound
-        animator.SetTrigger("Eating");
     }
 }
