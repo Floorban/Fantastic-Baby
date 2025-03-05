@@ -938,6 +938,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -1146,6 +1148,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -1191,6 +1195,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -1556,6 +1562,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -1917,6 +1925,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -1951,45 +1961,37 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 459220594319627381, guid: 3987284ed83e82140bba03349fb218ad, type: 3}
-      propertyPath: m_Name
-      value: bABYjESUS
+    - target: {fileID: 2944030294904009231, guid: 3987284ed83e82140bba03349fb218ad, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2944030294904009231, guid: 3987284ed83e82140bba03349fb218ad, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2944030294904009231, guid: 3987284ed83e82140bba03349fb218ad, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4049109276372033356, guid: 3987284ed83e82140bba03349fb218ad, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4186432424267561882, guid: 3987284ed83e82140bba03349fb218ad, type: 3}
       propertyPath: m_Name
       value: Baby
       objectReference: {fileID: 0}
+    - target: {fileID: 4333393693987874498, guid: 3987284ed83e82140bba03349fb218ad, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4433962322413785505, guid: 3987284ed83e82140bba03349fb218ad, type: 3}
       propertyPath: throwTarget
       value: 
       objectReference: {fileID: 1437571023}
-    - target: {fileID: 6645493611898377480, guid: 3987284ed83e82140bba03349fb218ad, type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6645493611898377480, guid: 3987284ed83e82140bba03349fb218ad, type: 3}
-      propertyPath: m_Constraints
-      value: 112
-      objectReference: {fileID: 0}
     - target: {fileID: 7008230841805199609, guid: 3987284ed83e82140bba03349fb218ad, type: 3}
       propertyPath: speed
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 7008230841805199609, guid: 3987284ed83e82140bba03349fb218ad, type: 3}
-      propertyPath: jumpForce
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7105355097249861094, guid: 3987284ed83e82140bba03349fb218ad, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.72647
-      objectReference: {fileID: 0}
-    - target: {fileID: 7105355097249861094, guid: 3987284ed83e82140bba03349fb218ad, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.72647
-      objectReference: {fileID: 0}
-    - target: {fileID: 7105355097249861094, guid: 3987284ed83e82140bba03349fb218ad, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.72647
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7105355097249861094, guid: 3987284ed83e82140bba03349fb218ad, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2030,22 +2032,6 @@ PrefabInstance:
     - target: {fileID: 7105355097249861094, guid: 3987284ed83e82140bba03349fb218ad, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7105355097249861094, guid: 3987284ed83e82140bba03349fb218ad, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7803590450033914012, guid: 3987284ed83e82140bba03349fb218ad, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.45745602
-      objectReference: {fileID: 0}
-    - target: {fileID: 7803590450033914012, guid: 3987284ed83e82140bba03349fb218ad, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.538872
-      objectReference: {fileID: 0}
-    - target: {fileID: 7803590450033914012, guid: 3987284ed83e82140bba03349fb218ad, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.132695
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2466,6 +2452,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -2909,6 +2897,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -3038,6 +3028,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -3202,6 +3194,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -3646,6 +3640,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -3812,6 +3808,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -3941,6 +3939,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -4046,6 +4046,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -4349,6 +4351,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 30
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -4504,6 +4508,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -4608,6 +4614,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -4821,6 +4829,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -5025,6 +5035,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -5251,6 +5263,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -5296,6 +5310,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -5346,6 +5362,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -5702,6 +5720,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -5807,6 +5827,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -6060,6 +6082,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -6278,6 +6302,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -6433,6 +6459,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -6699,6 +6727,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -6744,6 +6774,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -6899,6 +6931,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -7154,6 +7188,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -7264,6 +7300,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -7336,6 +7374,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -7554,6 +7594,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -7663,6 +7705,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -7757,6 +7801,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -8067,6 +8113,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -8169,6 +8217,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -8330,6 +8380,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -8375,6 +8427,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -8420,6 +8474,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -8576,6 +8632,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -8705,6 +8763,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -8777,6 +8837,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -8933,6 +8995,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -9073,6 +9137,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -9263,6 +9329,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -9368,6 +9436,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   sr: {fileID: 0}
+  animator: {fileID: 0}
+  eatable: 0
   curve:
     serializedVersion: 2
     m_Curve:

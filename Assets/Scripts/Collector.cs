@@ -3,8 +3,9 @@ using UnityEngine.WSA;
 
 public class Collector : MonoBehaviour
 {
-/*    [SerializeField] float interactRadius;
-    [SerializeField] LayerMask interactLayer;*/
+    /*    [SerializeField] float interactRadius;
+        [SerializeField] LayerMask interactLayer;*/
+    [SerializeField] GameObject player;
     [SerializeField] LevelManager throwTarget;
     [SerializeField] Transform pickUpHolder;
     public GameObject canPickupObj;
@@ -48,6 +49,30 @@ public class Collector : MonoBehaviour
                 curObj = null;
                 canPickupObj = null;
                 canPickup = true;
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (curObj != null)
+            {
+                if (curObj.eatable)
+                {
+                    curObj.EatMe();
+                    player.transform.localScale *= 1.2f;
+                    Destroy(curObj.gameObject, 0.8f);
+                    curObj = null;
+                    canPickupObj = null;
+                }
+                else
+                {
+                    if (player.transform.localScale.x >= 1)
+                    {
+                        curObj.EatMe();
+                        Destroy(curObj.gameObject, 0.8f);
+                        curObj = null;
+                        canPickupObj = null;
+                    }
+                }
             }
         }
     }
