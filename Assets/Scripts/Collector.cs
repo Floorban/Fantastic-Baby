@@ -1,4 +1,5 @@
 using System.Collections;
+using FMODUnity;
 using UnityEngine;
 public class Collector : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class Collector : MonoBehaviour
     public GameObject canPickupObj;
     public SpawnedObj curObj;
     public bool canPickup;
+
+    [SerializeField] FMODUnity.EventReference s_Eating;
 
     private void Update()
     {
@@ -61,7 +64,7 @@ public class Collector : MonoBehaviour
             {
                 if (curObj.eatable)
                 {
-                    //play eating sound
+                    RuntimeManager.PlayOneShot(s_Eating, transform.position);
                     animator.SetTrigger("Eating");
                     Destroy(curObj.gameObject, 0.8f);
                     curObj = null;
@@ -72,7 +75,7 @@ public class Collector : MonoBehaviour
                 {
                     if (player.transform.localScale.x >= 1)
                     {
-                        //play eating sound
+                        RuntimeManager.PlayOneShot(s_Eating, transform.position);
                         animator.SetTrigger("Eating");
                         Destroy(curObj.gameObject, 0.8f);
                         curObj = null;

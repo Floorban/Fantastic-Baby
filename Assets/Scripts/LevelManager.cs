@@ -192,5 +192,6 @@ public class LevelManager : MonoBehaviour
 
     private void OnDestroy() {
         i_Music.release();
+        i_Music.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 }
