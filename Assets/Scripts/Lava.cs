@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class Lava : MonoBehaviour
 {
-    [SerializeField] GameObject finalScreen;
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<PlayerController>())
@@ -11,7 +10,7 @@ public class Lava : MonoBehaviour
             if (player.isGrounded)
             {
                 player.gameObject.SetActive(false);
-                finalScreen.SetActive(true);
+                player.finalScreen.SetActive(true);
                 Debug.Log("game over");
             }
         }

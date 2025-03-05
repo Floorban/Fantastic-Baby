@@ -7,5 +7,6 @@ public class IntroStart : MonoBehaviour
     public void NextScene()
     {
         SceneManager.LoadScene(sceneIndex);
+        //AudioManager.
     }
 }

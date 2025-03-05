@@ -6,6 +6,8 @@ using UnityEngine;
 [RequireComponent (typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
 {
+    public GameObject finalScreen;
+
     public bool canAct;
     private Animator animator;
     private Rigidbody rb;
