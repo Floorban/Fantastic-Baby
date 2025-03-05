@@ -1,7 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.WSA;
-
 public class Collector : MonoBehaviour
 {
     /*    [SerializeField] float interactRadius;
