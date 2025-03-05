@@ -7249,11 +7249,12 @@ MonoBehaviour:
   - {fileID: 2614752265519231004, guid: 36df70d5be8b0b440a8278d2dfaea985, type: 3}
   spawnObjPrefab: {fileID: 6488923775162186117, guid: b867806210cec0d4a9064af7b7d79522, type: 3}
   spawnedObjs: []
-  maxSpawnCount: 10
+  maxSpawnCount: 20
   minSpawnTime: 0.5
   maxSpawnTime: 2
   spawnRadius: 13
   innerRadius: 5
+  canLava: 0
   lava: {fileID: 7291945444392980299, guid: cbfb39190921deb4c9422cfbc411e2e4, type: 3}
   isExploding: 0
   curProgress: 0

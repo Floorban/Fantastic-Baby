@@ -21,6 +21,7 @@ public class LevelManager : MonoBehaviour
     public float spawnRadius, innerRadius;
 
     [Header("Progress")]
+    public bool canLava;
     public GameObject lava;
     public bool isExploding;
     public float curProgress;
@@ -60,11 +61,11 @@ public class LevelManager : MonoBehaviour
         }
         if (curProgress >= 100f)
         {
-            curProgress = 100f;
+            curProgress = 99f;
             StartCoroutine(ExplodeClimaxTime());
-
             GameObject l = Instantiate(lava, spawnArea.position, Quaternion.Euler(0, Random.Range(0f, 360f), 0));
             l.transform.SetParent(gameObject.transform);
+            pDropSpeed += 2;
         }
         if (curProgress < 0)
         {
@@ -121,7 +122,7 @@ public class LevelManager : MonoBehaviour
         }
         yield return new WaitForSeconds(0.2f);
         cm.canFollow = false;
-        player.canAct = false;
+        //player.canAct = false;
         ground.canSpin = false;
         minSpawnTime = 0.02f;
         maxSpawnTime = 0.02f;
@@ -133,6 +134,7 @@ public class LevelManager : MonoBehaviour
         maxSpawnTime = 3f;
         yield return StartCoroutine(cm.Zoom(10f, 45f, 35f, 0.3f));
         cm.canFollow = true;
+
     }
     Vector3 GetRandomPosition()
     {

@@ -14,6 +14,10 @@ public class Collector : MonoBehaviour
 
     private void Update()
     {
+        if (player.transform.localScale.x > 0.3f)
+        {
+            player.transform.localScale -= Vector3.one * 0.02f * Time.deltaTime;
+        }
         if (Input.GetKeyDown(KeyCode.F))
         {
             /*if (curObj == null)
