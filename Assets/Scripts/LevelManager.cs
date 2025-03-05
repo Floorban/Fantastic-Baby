@@ -21,6 +21,7 @@ public class LevelManager : MonoBehaviour
     public float spawnRadius, innerRadius;
 
     [Header("Progress")]
+    public GameObject lava;
     public bool isExploding;
     public float curProgress;
     [SerializeField] float pDropSpeed;
@@ -61,6 +62,13 @@ public class LevelManager : MonoBehaviour
         {
             curProgress = 100f;
             StartCoroutine(ExplodeClimaxTime());
+
+            GameObject l = Instantiate(lava, spawnArea.position, Quaternion.Euler(0, Random.Range(0f, 360f), 0));
+            l.transform.SetParent(gameObject.transform);
+        }
+        if (curProgress < 0)
+        {
+            curProgress = 0;
         }
     }
 
