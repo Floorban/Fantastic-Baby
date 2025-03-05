@@ -1,11 +1,12 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class SpawnedObj : PickUp
 {
     Camera cam;
     [Header("Properties")]
-    private SpriteRenderer sr;
+    [SerializeField] Image sr;
 
     [Header("Throw Anim")]
     public AnimationCurve curve;
@@ -14,7 +15,6 @@ public class SpawnedObj : PickUp
     private void Awake()
     {
         cam = FindFirstObjectByType<Camera>();
-        sr = GetComponent<SpriteRenderer>();
     }
     private void LateUpdate()
     {
@@ -27,17 +27,17 @@ public class SpawnedObj : PickUp
     {
         if (targetPos == null || image == null) return;
         sr.sprite = image;
-        StartCoroutine(Curve(transform.position, targetPos));
+        StartCoroutine(Curve(transform.position, targetPos, maxHeightY, duration));
     }
     public void Throw(Vector3 targetPos)
     {
         value = Random.Range(value - 10f,value + 10f);
-        StartCoroutine(Curve(transform.position, targetPos));
+        StartCoroutine(Curve(transform.position, targetPos, maxHeightY * 5f, duration * 1.5f));
     }
-    private IEnumerator Curve(Vector3 start, Vector3 finish)
+    private IEnumerator Curve(Vector3 start, Vector3 finish, float h, float d)
     {
         var timePast = 0f;
-        var dur = Random.Range(duration - 0.2f, duration + 0.2f);
+        var dur = Random.Range(d - 0.2f, d + 0.2f);
         while (timePast < dur)
         {
             timePast += Time.deltaTime;
@@ -45,7 +45,7 @@ public class SpawnedObj : PickUp
             var linearTime = timePast / dur;
             var heightTime = curve.Evaluate(linearTime);
 
-            var height = Mathf.Lerp(0f, maxHeightY, heightTime); //clamped between the max height and 0
+            var height = Mathf.Lerp(0f, h, heightTime); //clamped between the max height and 0
 
             transform.position = Vector3.Lerp(start, finish, linearTime) + new Vector3(0f, height, 0f);
 
